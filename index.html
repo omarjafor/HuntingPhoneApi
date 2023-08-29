@@ -18,10 +18,6 @@
         <section class="bg-gray-400 p-4 m-4 flex justify-center">
             <input id="search-field" type="text" placeholder="search..." class="input input-bordered w-4/5" />
             <button onclick="handleSearch()" class="btn btn-primary px-6 ml-2">Search</button>
-            <!-- another search field -->
-            <!-- <input type="text" id="search-field2" placeholder="Search here" class="input input-bordered w-full max-w-xs" />
-            <button onclick="handleSearch2()" class="btn btn-active btn-primary">Search</button> -->
-
         </section>
 
 
@@ -31,6 +27,7 @@
             <div id="loading-spinner" class="text-center my-20 hidden">
                 <span class="loading loading-spinner text-primary loading-lg"></span>
             </div>
+            <div id="results" class="mx-auto text-center text-2xl font-bold"></div>
             <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 
             </div>
@@ -48,16 +45,13 @@
                     
                 </div>
                 <div class="modal-action">
-                    <!-- if there is a button in form, it will close the modal -->
                     <button class="btn btn-error">Close</button>
                 </div>
             </form>
         </dialog>
 
     </main>
-    <footer class="font-semibold my-2">
-
-    </footer>
+    <footer></footer>
     <script src="js/phone.js"></script>
 </body>
 

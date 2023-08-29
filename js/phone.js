@@ -7,7 +7,14 @@ const loadPhone = async (searchText, isShowAll) => {
 }
 
 const displayPhones = (phones, isShowAll) => {
+    const resultsContainer = document.getElementById("results");
+    if (phones.length === 0) {
+        resultsContainer.textContent = "Nothing Found! No Items Matched";
+    }else{
+        resultsContainer.textContent = '';
+    }
     const phoneContainer = document.getElementById('phone-container');
+    
     phoneContainer.textContent = '';
 
     const showAllContainer = document.getElementById('show-all-container');
