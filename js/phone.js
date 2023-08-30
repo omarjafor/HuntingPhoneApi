@@ -70,7 +70,6 @@ const toggleLoadingSpinner = (isLoading) => {
 }
 
 const handleShowAll = (input) => {
-    console.log(input);
     handleSearch(true, input);
 }
 
