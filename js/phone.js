@@ -7,16 +7,6 @@ const loadPhone = async (searchText, isShowAll) => {
 }
 
 const displayPhones = (phones, isShowAll) => {
-    const resultsContainer = document.getElementById("results");
-    if (phones.length === 0) {
-        resultsContainer.textContent = "Nothing Found! No Items Matched";
-    }else{
-        resultsContainer.textContent = '';
-    }
-    const phoneContainer = document.getElementById('phone-container');
-    
-    phoneContainer.textContent = '';
-
     const showAllContainer = document.getElementById('show-all-container');
     if(phones.length > 10 && !isShowAll){
         showAllContainer.classList.remove('hidden');
@@ -27,6 +17,15 @@ const displayPhones = (phones, isShowAll) => {
     if(!isShowAll){
         phones = phones.slice(0, 9);
     }
+
+    const resultsContainer = document.getElementById("results");
+    if (phones.length === 0) {
+        resultsContainer.textContent = "Nothing Found! No Items Matched";
+    } else {
+        resultsContainer.textContent = '';
+    }
+    const phoneContainer = document.getElementById('phone-container');
+    phoneContainer.textContent = '';
     
     phones.forEach(phone => {
         const phoneCard = document.createElement('div');
@@ -94,4 +93,5 @@ const showPhoneDetails = (phone) => {
 
     show_details_modal.showModal();
 }
+
 loadPhone('a');
